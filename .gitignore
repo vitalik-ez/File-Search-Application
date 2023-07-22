@@ -1,0 +1,16 @@
+# Ignore build artifacts
+*.o
+*.a
+main
+
+# Ignore editor and IDE specific files
+.vscode/
+*.code-workspace
+
+# Ignore any generated files and directories
+search_lib.h.gch
+search_lib.o
+
+# Ignore system-specific files and directories
+.DS_Store
+Thumbs.db
