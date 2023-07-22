@@ -22,11 +22,12 @@ make all
 ```
 3. Run the executable to search for a file:
 ```bash
-./main <filename>
+./main <root_directory> <filename>
 ```
-Replace <filename> with the name of the file you want to search for. The application will search for the file in the root directory and its subdirectories and print the full path if found.
+Replace <root_directory> with the path to the directory from which you want to start the search, and <filename> with the name of the file you want to search for. The application will search for the file in the specified root directory and its subdirectories and print the full path if found.
 
 ## Additional Information
-* The application uses a static library (libsearchlib.a) to perform the file search. The library's compilation is handled separately from the application's compilation.  
+* The application uses a static library (libsearchlib.a) to perform the file search. The library's compilation is handled separately from the application's compilation.
 * The search process utilizes multiple threads, making it faster for large directory structures and allowing concurrent searching of multiple subdirectories.
-* Please note that running the application with elevated privileges (e.g., using sudo) may cause issues with file permissions. It is recommended to run the application as a regular user.
+* Please ensure that you provide a valid and accessible root directory. Running the application with restricted access directories (e.g., system directories) may lead to permission issues.
+* Running the application with elevated privileges (e.g., using sudo) is not recommended as it may cause issues with file permissions.
